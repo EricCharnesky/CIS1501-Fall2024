@@ -1,5 +1,56 @@
 import math
 
+caffeine_content_mg = {
+    'Mr. Goodbar chocolate': 122,
+    'Red Bull': 33,
+    'Monster Hitman Sniper energy drink': 270,
+    'Lipton Brisk iced tea - lemon flavor': 2,
+    'dark chocolate coated coffee beans': 869,
+    'Regular drip or percolated coffee': 60,
+    'Buzz Bites Chocolate Chews': 1639
+}
+
+caffeine_content_mg.pop('Buzz Bites Chocolate Chews')
+
+caffeine_content_mg['Starbucks tripleshot energy bold mocha'] = 225
+
+print(f'If you eat all this, you\'ll have this much caffeine: {sum(caffeine_content_mg.values())}')
+
+
+# { for dictionary }
+# key : value , separate each pair
+grades = {"Eric": "A", 'Jeb': 'B', 'Journey': "C"}
+
+
+seats = {1: "first place", 2 : 4.2}
+
+# dictionary_value[key] to get the value associated
+print(f"Eric's grade is {grades["Eric"]}")
+
+# KeyError: 'jeb' - case sensitive
+print(f"Jeb's grade is {grades["Jeb"]}")
+
+# we can change the associated value of a key with =
+grades["Jeb"] = 'A'
+
+# if the key doesn't exist, it adds the pair
+grades['Jubilee'] = 'C-'
+
+# starts empty
+menu = {}
+
+dinner = input("What's for dinner tonight?")
+
+# add key value pair
+menu['Wednesday'] = dinner
+
+dinner = input("What's for dinner tomorrow?")
+menu['Thursday'] = dinner
+
+day = input("What day do you want to know what is for dinner?")
+print(menu[day])
+
+print(menu)
 
 # { } for set or set( )
 pokemon = {'Pikachu', 'Squirtle', 'Charmander', "Bulbasaur"}
