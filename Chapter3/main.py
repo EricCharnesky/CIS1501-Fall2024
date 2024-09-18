@@ -1,4 +1,5 @@
 import math
+import random
 
 caffeine_content_mg = {
     'Mr. Goodbar chocolate': 122,
@@ -75,6 +76,8 @@ print(pokemon)
 foods = ['Apples', 'Bananas', 'Cucumbers', 'Donuts']
 # index     0           1           2           3
 
+
+
 # first item is at index 0
 print(foods[0])
 
@@ -88,6 +91,9 @@ favorite_food = input(f'What is your favorite food? ')
 foods.append(favorite_food)
 
 print(foods)
+
+print(f"your random food {foods[random.randint(0, len(foods)-1)]}")
+print(f'another random food {random.choice(foods)}')
 
 # pop removes by index ( or the last item if no index given )
 foods.pop(1)
