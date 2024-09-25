@@ -1,3 +1,23 @@
+
+
+completed_classes = { 'CIS 1501', 'MATH 115', 'COMP 110', 'CHEM 134' }
+
+catalog_prereqs = { "CIS 2001" : {'CIS 1501', 'MATH 115'},
+                    "CIS 275" : {'MATH 115', 'CIS 2001'},
+                    "ECE 3100" : {'CIS 1501', 'MATH 227', 'IMSE 317'},
+                    "CIS 3200" : {'CIS 2001', 'ECE 3100'} }
+
+class_to_take = input("What class do you want to take? ")
+
+if catalog_prereqs[class_to_take].issubset(completed_classes):
+    print(f"You meet the prereqs for {class_to_take}")
+else:
+    print(f"You don't meet the preqs: {catalog_prereqs[class_to_take]}")
+
+
+
+
+
 age = int(input("Enter your age: "))
 
 car_insurance_monthly_rate = 100
@@ -160,3 +180,5 @@ if ( number1 == 7 and number2 == 2 and number3 == 5 ) or cheating == 'y':
     print("you win the lotto")
 else:
     print("You lost your money")
+
+
