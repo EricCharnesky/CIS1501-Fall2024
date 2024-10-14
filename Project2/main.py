@@ -103,3 +103,15 @@ word_list = ["about",
 
 word = random.sample(word_list, 1)
 print(word[0])
+
+
+print("""
+--------|
+|       O
+|      \\|/
+|       |
+|      / \\
+|
+|
+----------
+""")
