@@ -1,3 +1,31 @@
+phone_number = input("Enter a phone number")
+
+parts = phone_number.split("-")
+
+print(f"Area Code: {parts[0]}")
+print(f'local number: {parts[1]} {parts[2]}')
+
+
+sentence = input("enter a sentence")
+
+print(sentence.split())
+print(sentence.split('eee'))
+
+first_name = input("Enter your first name ")
+last_name = input("Enter your last name ")
+
+names = [ first_name, last_name]
+
+print(",".join(names))
+
+final_string = ""
+for name in names:
+    final_string += name
+    final_string += ","
+final_string = final_string[:-1]
+
+print(final_string)
+
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 index_of_letter = int(input("Enter an index number for a letter of the alphabet"))
