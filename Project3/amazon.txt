@@ -1,0 +1,2 @@
+calculator|145.0|1.0
+socks|15.0|7.0

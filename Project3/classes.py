@@ -48,6 +48,9 @@ class Item:
     def __str__(self):
         return f'{self.get_quantity()} {self.get_name()} @ ${self.get_unit_price()}/each - ${self.get_total_price()}'
 
+    def get_line_for_file(self):
+        return f'{self.get_name()}|{self.get_unit_price()}|{self.get_quantity()}'
+
 
 class ShoppingCart:
 
@@ -56,6 +59,9 @@ class ShoppingCart:
 
     def add_item(self, item):
         self._items.append(item)
+
+    def get_number_of_items(self):
+        return len(self._items)
 
     def receipt(self):
         value = ""
@@ -66,3 +72,6 @@ class ShoppingCart:
         value += f'Grand Total: ${total}'
 
         return value
+
+    def get_line_for_file(self):
+        return "\n".join(item.get_line_for_file() for item in self._items)
